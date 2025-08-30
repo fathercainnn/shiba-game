@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://umk7731rrf7h"]
+
+[ext_resource type="Script" uid="uid://d3ccu4eely2mm" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://c72lwxre2hu5d" path="res://images/egg.png" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://8j56rakiiqr7" path="res://images/cracked_egg.png" id="3_h2yge"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_0xm2m")
+cracked_egg = ExtResource("3_h2yge")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 42.0
+offset_top = 537.0
+offset_right = 680.0
+offset_bottom = 814.0
+theme_override_font_sizes/font_size = 35
+text = "clicks: ??"
+uppercase = true
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 288.0
+offset_top = -5.0
+offset_right = 926.0
+offset_bottom = 272.0
+theme_override_font_sizes/font_size = 75
+text = "crack the egg!"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 434.0
+offset_top = 210.0
+offset_right = 707.0
+offset_bottom = 575.0
+
+[node name="Egg" type="Sprite2D" parent="TextureButton"]
+position = Vector2(125, 185)
+scale = Vector2(0.176989, 0.17875)
+texture = ExtResource("2_h2yge")
+
+[node name="CrackedEgg" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(563, 417)
+scale = Vector2(1.316, 1.17643)
+texture = ExtResource("3_h2yge")
+
+[connection signal="pressed" from="TextureButton" to="." method="on_egg_clicked"]
