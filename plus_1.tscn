@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cikl3nkubuc74"]
+
+[ext_resource type="Script" uid="uid://dr1b0brbf54ky" path="res://plus_1.gd" id="1_e53e4"]
+
+[node name="plusone" type="Node2D"]
+script = ExtResource("1_e53e4")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -41.0
+offset_top = -31.0
+offset_right = 49.0
+offset_bottom = 18.0
+theme_override_font_sizes/font_size = 35
+text = "crack"
+horizontal_alignment = 1
